@@ -7,93 +7,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature converter</title>
     <style>
-        body {
-            margin: 0%;
-            padding: 0%;
-            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
-            height: 100vh;
-        }
+       body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .main {
-            box-shadow: 0px 5px 10px 0px rgba(0, 255, 255, 0.7);
-            width: 450px;
-            height: 500px;
-            background-color: #b763d2;
-            margin: auto;
-            margin-top: 150px;
-            border-radius: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+.main {
+    box-shadow: 0px 5px 10px 0px rgba(0, 255, 255, 0.7);
+    width: 90%;
+    height: 70%;
+    max-width: 500px;
+    background-color: #84349f;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-        .heading {
-            display: flex;
-        }
+.heading {
+    display: flex;
+}
 
-        h1 {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif Courier, monospace;
-            margin-bottom: 15px;
-            background-color: #b763d2;
-            font-size: 30px;
-            color: black;
-            font-weight: bold;
-        }
+h1 {
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    background-color: #84349f;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
 
-        img {
-            height: 50px;
-            margin-bottom: 5px;
-            margin-top: 10px;
-        }
+img {
+    height: 50px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
 
-        input {
-            display: block;
-            background-color: white;
-            border: 2px solid white;
-            outline: none;
-            margin: 25px 10px;
-            padding: 10px 60px;
-            text-align: center;
-            margin-right: 0px;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-        }
-        .inner {
-            display: flex;
-            flex-direction: row;
-            background-color: #b763d2;
-        }
-        
-        button {
-            padding: 10px 30px;
-            background-color: #6ba7ec;
-            border: none;
-            border-radius: 15px;
-            font-size: large;
-            box-shadow: 1px 1px 1px 1px #000000;
-            margin-bottom: 30px;
-        }
+input {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: white;
+    border: 2px solid white;
+    outline: none;
+    margin: 25px 10px;
+    padding: 10px 60px;
+    text-align: center;
+    margin-right: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        button:hover {
-            background-color: black;
-            color: #6ba7ec;
-            cursor: pointer;
-        }
+input:active {
+    background-color: #6ba7ec;
+}
 
-        span {
-            background-color: black;
-            height: 30px;
-            width: 10px;
-            margin: 25px 10px;
-            padding: 10px 15px;
-            color: white;
-            margin-left: 0px;
-            border: 2px solid white;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-        
+.inner {
+    display: flex;
+    flex-direction: row;
+    background-color: #84349f;
+    width: 100%;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: #6ba7ec;
+    border: none;
+    border-radius: 15px;
+    font-size: large;
+    box-shadow: 1px 1px 1px 1px #000000;
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: black;
+    color: #6ba7ec;
+    cursor: pointer;
+}
+
+span {
+    background-color: black;
+    height: 30px;
+    width: 10px;
+    margin: 25px 10px;
+    padding: 10px 15px;
+    color: white;
+    margin-left: 0px;
+    border: 2px solid white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
     </style>
 </head>
 
