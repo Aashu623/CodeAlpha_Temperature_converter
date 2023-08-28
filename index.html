@@ -6,168 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature converter</title>
-    <style>
-       body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main {
-    box-shadow: 0px 5px 10px 0px rgba(0, 255, 255, 0.7);
-    width: 90%;
-    height: 70%;
-    max-width: 500px;
-    background-color: #84349f;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.heading {
-    display: flex;
-}
-
-h1 {
-    font-family: sans-serif;
-    margin-bottom: 15px;
-    background-color: #84349f;
-    font-size: 30px;
-    color: black;
-    font-weight: bold;
-}
-
-img {
-    height: 50px;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
-input {
-    display: block;
-    font-size: 18px;
-    font-weight: 700;
-    background-color: white;
-    border: 2px solid white;
-    outline: none;
-    margin: 25px 10px;
-    padding: 10px 60px;
-    text-align: center;
-    margin-right: 0px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-input:active {
-    background-color: #6ba7ec;
-}
-
-.inner {
-    display: flex;
-    flex-direction: row;
-    background-color: #84349f;
-    width: 100%;
-}
-
-button {
-    padding: 10px 30px;
-    background-color: #6ba7ec;
-    border: none;
-    border-radius: 15px;
-    font-size: large;
-    box-shadow: 1px 1px 1px 1px #000000;
-    margin-bottom: 30px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-button:hover {
-    background-color: black;
-    color: #6ba7ec;
-    cursor: pointer;
-}
-
-span {
-    background-color: black;
-    height: 30px;
-    width: 10px;
-    margin: 25px 10px;
-    padding: 10px 15px;
-    color: white;
-    margin-left: 0px;
-    border: 2px solid white;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2a67444176.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="main">
-        <div class="heading">
-            <h1>Temperature converter</h1>
-            <img src="temperature-icon-png-8.png" alt="">
+    <div class="container">
+        <div class="main">
+            <div class="heading-div">
+                <h1 class="heading">Temperature converter</h1>
+                <i class="fa-solid fa-temperature-list"></i>
+            </div>
+            <div class="inner">
+                <input class="input" type="number" id="celsius" placeholder="Celcius">
+                <span class="icon">°C</span>
+            </div>
+            <div class="inner">
+                <input class="input" type="number" id="fahrenheit" placeholder="Fahrenheit">
+                <span class="icon">°F</span>
+            </div>
+            <div class="inner">
+                <input class="input" type="number" id="kelvin" placeholder="Kelvin">
+                <span class="icon">°K</span>
+            </div>
+            <button class="btn" type="submit" id="clear">All clear</button>
         </div>
-        <hr width="100%" color="6ba7ec" size="10px">
-        <div class="inner">
-            <input type="number" id="celsius" placeholder="Celcius">
-            <span>°C</span>
-        </div>
-        <div class="inner">
-            <input type="number" id="fahrenheit" placeholder="Fahrenheit">
-            <span>°F</span>
-        </div>
-        <div class="inner">
-            <input type="number" id="kelvin" placeholder="Kelvin">
-            <span>°K</span>
-        </div>
-        <button type="submit" id="clear">All clear</button>
     </div>
-    <script>
-        let celsius = document.getElementById('celsius');
-        let fahrenheit = document.getElementById('fahrenheit');
-        let kelvin = document.getElementById('kelvin');
-        celsius.oninput = function () {
-            let f = (parseFloat(
-                celsius.value) * 9) / 5 + 32;
-            fahrenheit.value = parseFloat(f.toFixed(2));
-
-            let k = (parseFloat(
-                celsius.value) + 273.15);
-            kelvin.value = parseFloat(k.toFixed(2));
-        }
-        fahrenheit.oninput = function () {
-            let c = ((parseFloat(
-                fahrenheit.value) - 32) * 5) / 9;
-            celsius.value = parseFloat(c.toFixed(2));
-
-            let k = (parseFloat(
-                fahrenheit.value) - 32) * 5 / 9 + 273.15;
-            kelvin.value = parseFloat(k.toFixed(2));
-        }
-        kelvin.oninput = function () {
-            let f = (parseFloat(
-                kelvin.value) - 273.15) * 9 / 5 + 32;
-            fahrenheit.value = parseFloat(f.toFixed(2));
-
-            let c = (parseFloat(kelvin.value) - 273.15);
-            celsius.value = parseFloat(c.toFixed(2));
-        }
-        document.getElementById("clear").addEventListener("click", function () {
-            celsius.value = null;
-            fahrenheit.value = null;
-            kelvin.value = null;
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
